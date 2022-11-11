@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloo Chatroom!</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  {% block chat %}
+    <div class="chat">
+    {% block authentication %}
+      <h1>Welcome
+        <br><br>to<br><br>
+        Bloo Chat!</h1>
+      <form action="/login" class="main-options">
+        <button class="btn">login</button>
+      </form>
+      <div>
+        <form action="/register" class="main-options">
+          <button class="btn">register</button>
+        </form>
+      </div>
+    {% endblock %}
+    </div>
+  {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "./index.njk" %}
+{% block authentication %}
+<div  class="center">
+    <div>
+        <label  for="username"><b>Username</b></label>
+        <input id="username"  type="text" placeholder="Enter Username" name="username" class="input-field" required>
+    </div>
+
+    <div>
+        <label for="password">
+            <b>Password</b>
+        </label>
+        <input id="password" type="password" placeholder="Enter Password" name="password" class="input-field" required>
+    </div>
+
+    <div>
+        <button type="submit" id="registerButn" class="btn">Register</button>
+    </div>
+    <div>
+        <span id="messages"></span>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="register.js"></script>
+
+{% endblock%}
